@@ -1,5 +1,5 @@
 import React from 'react';
-import axiosWithAuth from './axiosAuth';
+import axiosWithAuth from '../axiosAuth';
 import styled from 'styled-components';
 
 class LogInForm extends React.Component {
@@ -40,6 +40,7 @@ class LogInForm extends React.Component {
 					<input
 						type='text'
 						name='username'
+						placeholder='Username'
 						value={this.state.credentials.username}
 						onChange={this.handleChange}
 					/>
@@ -47,6 +48,7 @@ class LogInForm extends React.Component {
 					<input
 						type='password'
 						name='password'
+						placeholder='Password'
 						value={this.state.credentials.password}
 						onChange={this.handleChange}
 					/>
@@ -59,3 +61,34 @@ class LogInForm extends React.Component {
 }
 
 export default LogInForm;
+
+//Log In Box
+const FormDiv = styled.form`
+	background: #ffffff;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 5px 2px rgba(0, 0, 0, 0.24);
+	width: 100%;
+	height: 5em;
+	max-width: 250px;
+	padding: 15px;
+	margin: 16px auto;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	h2 {
+		margin-top: 0;
+		margin-bottom: 5%;
+		color: black;
+	}
+`;
+
+//Log In Button
+const StyledButton = styled.button`
+	background: #a4a89f;
+	font-size: 1em;
+	margin: 0.5em;
+	padding: 0.25em 0.75em;
+	border: none;
+	border-radius: 3px;
+`;
